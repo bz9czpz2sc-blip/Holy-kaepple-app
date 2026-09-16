@@ -1,0 +1,363 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#d31322"><title>Holy Käpple</title><style>
+:root{--r:#d31322;--d:#171717;--bg:#f4f4f4;--m:#747474;--line:#e8e8e8}*{box-sizing:border-box}body{margin:0;background:#111;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#171717}button,input,select,textarea{font:inherit}.phone{max-width:430px;min-height:100vh;margin:auto;background:var(--bg);position:relative}.header{height:122px;padding:42px 18px 14px;color:#fff;background:linear-gradient(135deg,#0f0f0f,#292929 52%,#a30e18);position:relative}.brand{font-weight:950;font-size:30px;font-style:italic;letter-spacing:-1.8px;text-transform:uppercase;text-shadow:2px 2px #000}.sub{font-size:10px;letter-spacing:2px;margin-top:8px;opacity:.85}.hl{position:absolute;right:14px;top:43px;display:flex;gap:7px}.hl a{width:34px;height:34px;border:1px solid #ffffff70;border-radius:50%;display:grid;place-items:center;color:#fff;text-decoration:none}.content{padding:18px 16px 98px;background:linear-gradient(#fffffff5,#fffffff9),url(stadium-bg.jpg);min-height:calc(100vh - 122px)}h1{font-size:27px;margin:0 0 5px;font-weight:900}h2{font-size:19px;margin:24px 0 10px}.muted{color:var(--m);font-size:13px;line-height:1.35}.card{background:#fff;border-radius:17px;margin:10px 0;box-shadow:0 3px 14px #00000014;overflow:hidden}.news{display:flex;gap:12px;padding:12px}.thumb{width:76px;height:72px;border-radius:11px;background:linear-gradient(135deg,#222,#b3121d);display:grid;place-items:center;color:#fff;font-size:25px;flex:none}.news b{font-size:14px}.tag,.badge{display:inline-block;border-radius:20px;padding:4px 8px;font-size:9px;font-weight:900}.tag{background:var(--r);color:#fff}.badge.g{background:#e3f4eb;color:#16794a}.badge.y{background:#fff1cf;color:#a46b00}.badge.x{background:#eee;color:#666}.row{display:flex;align-items:center;gap:12px;padding:14px;border-bottom:1px solid var(--line)}.row:last-child{border:0}.grow{flex:1;min-width:0}.date{width:55px;text-align:center;font-size:12px;font-weight:800}.date strong{display:block;font-size:20px}.logo{width:40px;height:40px;border-radius:50%;background:#eee;display:grid;place-items:center;font-size:10px;font-weight:900}.event-date{width:55px;background:#f2f2f2;border-radius:10px;padding:7px;text-align:center;font-weight:800}.event-date strong{display:block;font-size:20px}.price{font-size:18px;font-weight:950}.tl{display:flex;justify-content:space-between;gap:8px;align-items:center}.btn{border:0;border-radius:12px;padding:12px 15px;background:var(--r);color:#fff;font-weight:850;width:100%;font-size:14px}.btn.sec{background:#eee;color:#222}.btn.sm{width:auto;padding:9px 11px;font-size:12px}.tabs{display:flex;gap:6px;margin:8px 0 14px;overflow:auto}.pill{border:0;border-radius:20px;padding:8px 12px;background:#eee;font-weight:750;font-size:11px;white-space:nowrap}.pill.on{background:var(--r);color:#fff}.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);max-width:430px;width:100%;height:78px;background:#fffffff7;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:20}.nav{border:0;background:none;color:#777;font-size:10px;font-weight:650;display:flex;flex-direction:column;align-items:center;gap:5px}.nav span{font-size:20px}.nav.on{color:var(--r)}.hide{display:none!important}.hero{background:linear-gradient(135deg,#171717,#3b3b3b);color:#fff;padding:17px;border-radius:18px;margin:10px 0}.hero .big{font-size:23px;font-weight:950}.notice{padding:13px 14px;border-radius:14px;background:#fff4f4;border:1px solid #ffd8db;font-size:12px;line-height:1.4}.empty{text-align:center;padding:22px;color:#777;font-size:13px}.form{padding:15px}.field{margin-bottom:12px}.field label{display:block;font-size:11px;font-weight:850;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #ddd;border-radius:11px;padding:11px 12px;background:#fff}.field textarea{min-height:80px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.admin{padding:14px}.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#171717;color:#fff;padding:10px 15px;border-radius:20px;font-size:12px;opacity:0;z-index:50}.toast.show{opacity:1}.result{font-weight:950;font-size:16px}hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+
+/* ===== HOLY KÄPPLE V3 VISUAL REFRESH ===== */
+:root{
+ --r:#e30613;--r2:#b3000c;--ink:#111;--muted:#727272;--bg:#f1f1f1;
+ --glass:rgba(255,255,255,.82);--line:rgba(0,0,0,.08)
+}
+body{background:
+ radial-gradient(circle at 50% -10%,#3b3b3b 0,#111 42%,#080808 100%);
+}
+.phone{background:#f4f4f4;box-shadow:0 0 55px rgba(0,0,0,.38)}
+.header{
+ height:150px;padding:46px 18px 18px;
+ background:
+ radial-gradient(circle at 85% 10%,rgba(255,255,255,.18),transparent 22%),
+ linear-gradient(150deg,#090909 0%,#181818 43%,#9f0610 100%);
+ border-bottom:4px solid #fff;overflow:hidden
+}
+.header:before{
+ content:"";position:absolute;left:-8%;right:-8%;bottom:-28px;height:62px;
+ background:linear-gradient(180deg,transparent 0 22%,#fff 23% 38%,#e30613 39% 57%,#fff 58% 70%,transparent 71%);
+ transform:rotate(-2deg);opacity:.96
+}
+.brand{font-size:34px;letter-spacing:-2.5px;position:relative;z-index:2}
+.sub{position:relative;z-index:2;font-size:10px;font-weight:800}
+.hl{z-index:3}
+.hl a{background:rgba(0,0,0,.3);backdrop-filter:blur(8px)}
+.content{
+ padding:20px 15px 104px;
+ background:
+ radial-gradient(circle at 90% 0%,rgba(227,6,19,.055),transparent 28%),
+ linear-gradient(rgba(255,255,255,.94),rgba(255,255,255,.98));
+}
+h1{font-size:30px;letter-spacing:-1.2px}
+h2{font-size:18px;text-transform:uppercase;letter-spacing:.2px;margin-top:27px}
+.card{
+ border:1px solid rgba(0,0,0,.045);box-shadow:0 8px 24px rgba(0,0,0,.075);
+ border-radius:19px
+}
+.news{padding:13px}
+.thumb{
+ width:82px;height:78px;border-radius:14px;
+ background:linear-gradient(145deg,#0e0e0e,#c70816);
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)
+}
+.news b{font-size:15px}
+.tag{background:#111;letter-spacing:.5px}
+.hero{
+ position:relative;overflow:hidden;min-height:112px;padding:20px;
+ background:
+ linear-gradient(125deg,rgba(0,0,0,.9),rgba(35,35,35,.92)),
+ repeating-linear-gradient(165deg,transparent 0 13px,rgba(255,255,255,.04) 14px 15px)
+}
+.hero:after{content:"";position:absolute;right:-35px;bottom:-35px;width:150px;height:150px;border-radius:50%;border:13px solid #e30613;opacity:.75}
+.hero .big{position:relative;z-index:2;font-size:26px}
+.row{padding:15px}
+.match-next,.ticket{transition:transform .15s}
+.match-next:active,.ticket:active{transform:scale(.985)}
+.bottom{
+ height:82px;backdrop-filter:blur(18px);background:rgba(255,255,255,.88)
+}
+.nav{font-size:9px}
+.nav span{font-size:21px}
+.btn{background:linear-gradient(135deg,#e30613,#b4000b);box-shadow:0 6px 14px rgba(227,6,19,.18)}
+.btn.sec{box-shadow:none}
+.pill{border:1px solid #e2e2e2}
+.pill.on{background:#111}
+.notice{background:#fff;border-color:#eee;box-shadow:0 5px 18px rgba(0,0,0,.04)}
+.vfb-feed{display:grid;gap:10px}
+.vfb-item{
+ display:flex;gap:12px;padding:13px;background:#fff;border-radius:17px;
+ border:1px solid rgba(0,0,0,.05);box-shadow:0 7px 20px rgba(0,0,0,.065);
+ text-decoration:none;color:#111
+}
+.vfb-item:active{transform:scale(.99)}
+.vfb-date{width:55px;flex:none;text-align:center;border-radius:12px;background:#111;color:#fff;padding:7px 3px;font-size:9px;font-weight:800}
+.vfb-date strong{display:block;font-size:18px;line-height:1.1;color:#fff}
+.vfb-source{font-size:9px;color:#e30613;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.vfb-title{font-size:14px;font-weight:900;line-height:1.22}
+.vfb-loading{padding:17px;text-align:center;background:#fff;border-radius:17px;color:#777;font-size:12px}
+.vfb-more{display:block;text-align:center;margin-top:8px;color:#e30613;text-decoration:none;font-size:12px;font-weight:850}
+.social-strip{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.social-card{padding:13px;border-radius:17px;background:#111;color:#fff;text-decoration:none}
+.social-card.red{background:linear-gradient(135deg,#e30613,#92000a)}
+.social-card b{display:block;font-size:13px}
+.social-card span{font-size:10px;opacity:.72}
+
+</style>
+<style id="holy-v4">
+:root{
+  --red:#e30613;--red2:#b9000b;--ink:#090b0f;--panel:#11151b;--panel2:#171c23;
+  --muted:#9aa3ad;--white:#f7f8fa;--line:rgba(255,255,255,.09);
+  --shadow:0 18px 45px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+body{
+  margin:0!important;background:
+  radial-gradient(circle at 85% 0%,rgba(227,6,19,.20),transparent 30%),
+  radial-gradient(circle at 10% 25%,rgba(255,255,255,.035),transparent 24%),
+  #080a0d!important;color:var(--white)!important;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
+  background-image:linear-gradient(135deg,#fff 1px,transparent 1px);
+  background-size:22px 22px;z-index:-1;
+}
+header,.header,.topbar{
+  background:linear-gradient(135deg,#0b0d11 0%,#151922 58%,#4d050b 100%)!important;
+  border-bottom:1px solid rgba(255,255,255,.1)!important;
+  position:relative;overflow:hidden;
+}
+header:after,.header:after,.topbar:after{
+  content:"";position:absolute;left:-5%;right:-5%;bottom:-8px;height:22px;
+  background:linear-gradient(177deg,transparent 0 38%,#fff 39% 53%,var(--red) 54% 70%,#fff 71% 82%,transparent 83%);
+  opacity:.9;transform:skewY(-1.5deg);
+}
+h1,h2,h3{letter-spacing:-.035em!important}
+button,.btn{
+  border-radius:14px!important;border:1px solid rgba(255,255,255,.08)!important;
+  font-weight:800!important;transition:.18s ease!important;
+}
+button:active,.btn:active{transform:scale(.97)}
+.card,.panel,.box,.news-card,.match-card,.ticket-card,.event-card{
+  background:linear-gradient(145deg,rgba(24,29,37,.96),rgba(12,15,20,.96))!important;
+  border:1px solid var(--line)!important;border-radius:22px!important;
+  box-shadow:var(--shadow)!important;
+}
+main,.content,.page{padding-bottom:100px!important}
+.hero,.hero-card{
+  background:linear-gradient(135deg,#090b0f 0%,#211017 48%,#a8000c 140%)!important;
+  border-radius:28px!important;min-height:230px!important;
+  box-shadow:0 24px 60px rgba(0,0,0,.38)!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  position:relative;overflow:hidden;
+}
+.hero:before,.hero-card:before{
+  content:"";position:absolute;width:260px;height:260px;border:38px solid rgba(255,255,255,.07);
+  border-radius:50%;right:-100px;top:-120px;
+}
+.hero:after,.hero-card:after{
+  content:"";position:absolute;left:-15%;bottom:18px;width:130%;height:7px;
+  background:var(--red);box-shadow:0 13px 0 #fff;transform:rotate(-2deg);opacity:.9;
+}
+.hero *,.hero-card *{position:relative;z-index:1}
+.kicker,.eyebrow,.section-kicker{
+  color:#ff5360!important;text-transform:uppercase!important;letter-spacing:.16em!important;
+  font-size:11px!important;font-weight:900!important;
+}
+.big-score,.hero h1,.hero-card h1{font-size:clamp(30px,8vw,52px)!important;font-weight:950!important}
+.match-card{position:relative;overflow:hidden}
+.match-card:before{
+  content:"MATCHDAY";position:absolute;right:-30px;top:18px;font-size:44px;font-weight:950;
+  color:rgba(255,255,255,.025);transform:rotate(-10deg)
+}
+.match-card .opponent,.match-card h3{font-weight:900!important;font-size:25px!important}
+.badge,.pill,.status{
+  border-radius:999px!important;background:rgba(227,6,19,.14)!important;
+  color:#ff6973!important;border:1px solid rgba(227,6,19,.25)!important;font-weight:800!important;
+}
+nav,.bottom-nav,.tabbar{
+  background:rgba(9,11,15,.88)!important;backdrop-filter:blur(18px)!important;
+  border-top:1px solid rgba(255,255,255,.1)!important;
+}
+nav a.active,.bottom-nav a.active,.tabbar .active{color:#fff!important}
+nav a.active:after,.bottom-nav a.active:after,.tabbar .active:after{
+  background:var(--red)!important;box-shadow:0 0 16px rgba(227,6,19,.6)
+}
+.news-card,.news-item{
+  display:flex!important;gap:14px!important;align-items:center!important;
+}
+.news-card:hover,.ticket-card:hover,.event-card:hover{transform:translateY(-2px)}
+.news-card img,.news-item img{
+  width:88px!important;height:74px!important;object-fit:cover!important;border-radius:14px!important;
+  flex:none!important;
+}
+.ticket-card{
+  border-left:4px solid var(--red)!important;
+}
+.ticket-price{font-size:25px!important;font-weight:950!important}
+.ticket-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.primary,.btn-primary,.add-ticket{
+  background:linear-gradient(135deg,var(--red),#8d0009)!important;color:white!important;
+  box-shadow:0 10px 25px rgba(227,6,19,.25)!important;
+}
+.secondary,.btn-secondary{background:#20262f!important;color:#fff!important}
+input,select,textarea{
+  width:100%!important;background:#0d1015!important;color:#fff!important;
+  border:1px solid rgba(255,255,255,.13)!important;border-radius:14px!important;
+  padding:13px 14px!important;outline:none!important;
+}
+input:focus,select:focus,textarea:focus{border-color:rgba(227,6,19,.7)!important;box-shadow:0 0 0 3px rgba(227,6,19,.1)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-grid .full{grid-column:1/-1}
+.ticket-create{
+  background:linear-gradient(135deg,rgba(227,6,19,.18),rgba(255,255,255,.03))!important;
+  border:1px solid rgba(227,6,19,.28)!important;border-radius:22px!important;
+}
+.ticket-create h3{margin:0 0 5px}
+.empty{
+  text-align:center;padding:28px 16px;color:var(--muted);border:1px dashed rgba(255,255,255,.14);
+  border-radius:20px
+}
+@media(max-width:520px){
+  .form-grid{grid-template-columns:1fr}
+  .form-grid .full{grid-column:auto}
+}
+</style>
+
+</head><body><div class="phone"><header class="header"><div class="brand">Holy Käpple</div><div class="sub">VfB Stuttgart Fanclub</div><div class="hl"><a id="ig" target="_blank">◎</a><a id="web" target="_blank">⌂</a></div></header><main class="content">
+<section id="home"><h1>Willkommen bei Holy Käpple</h1><div class="muted">Gemeinsam für den VfB. Alles Wichtige auf einen Blick.</div><h2>Neueste Fanclub-News</h2><div id="news"></div><div class="tl" style="margin-top:25px"><h2 style="margin:0">Neuigkeiten vom VfB</h2><span class="badge x">OFFIZIELL</span></div><div id="vfbFeed" class="vfb-feed" style="margin-top:10px"><div class="vfb-loading">VfB-News werden geladen …</div></div><div class="social-strip" style="margin-top:10px"><a class="social-card red" id="vfbIgCard" target="_blank"><b>📷 VfB auf Instagram</b><span>Offizieller Kanal</span></a><a class="social-card" id="vfbWebCard" target="_blank"><b>🌐 VfB.de</b><span>Alle offiziellen Meldungen</span></a></div><h2>Ticket-Check</h2><div id="check"></div></section>
+<section id="matches" class="hide"><h1>Heimspiele</h1><div class="muted">VfB Stuttgart · Bundesliga 2026/27</div><div class="notice" style="margin-top:12px">Spielplandaten aus den offiziellen VfB-Angaben. Spätere Anstoßzeiten können noch geändert werden.</div><h2>Kommende Heimspiele</h2><div id="up"></div><h2>Vergangene Heimspiele</h2><div id="past"></div></section>
+<section id="events" class="hide"><h1>Termine</h1><div class="muted">Termine & Aktionen von Holy Käpple</div><div class="tabs"><button class="pill on" onclick="ef('Alle',this)">Alle</button><button class="pill" onclick="ef('Stammtisch',this)">Stammtisch</button><button class="pill" onclick="ef('Auswärtsfahrt',this)">Auswärts</button><button class="pill" onclick="ef('Sonstiges',this)">Sonstiges</button></div><div id="events"></div></section>
+<section id="tickets" class="hide"><h1>Ticketbörse</h1><div class="muted">Tickets von Mitgliedern</div><div class="notice" style="margin-top:12px">Bei einer Anfrage wird das Angebot vorübergehend reserviert. Die Übergabe erfolgt über WhatsApp. Der Anbieter bestätigt danach den erfolgreichen Transfer.</div><div class="tabs"><button class="pill on" onclick="tf('available',this)">Verfügbar</button><button class="pill" onclick="tf('mine',this)">Meine Angebote</button></div><div id="tickets"></div><button class="btn" onclick="ticketForm()">＋ Neues Ticketangebot erstellen</button></section>
+<section id="form" class="hide"><h1>Ticket anbieten</h1><div class="muted">Ticketdaten eintragen</div><div class="card form"><div class="field"><label>Name</label><input id="n" placeholder="Vorname Nachname"></div><div class="field"><label>Spiel</label><select id="m"></select></div><div class="grid2"><div class="field"><label>Block</label><input id="b" placeholder="35A"></div><div class="field"><label>Anzahl</label><input id="q" type="number" min="1" max="10" value="1"></div></div><div class="grid2"><div class="field"><label>Preis pro Ticket (€)</label><input id="p" type="number" min="0" step="1"></div><div class="field"><label>Reihe/Sitz</label><input id="s" placeholder="optional"></div></div><div class="field"><label>Hinweis</label><textarea id="note" placeholder="optional"></textarea></div><button class="btn" onclick="addTicket()">Angebot einstellen</button><button class="btn sec" style="margin-top:8px" onclick="go('tickets')">Abbrechen</button></div></section>
+<section id="detail" class="hide"><h1>Ticketangebot</h1><div id="detailBox"></div></section>
+<section id="more" class="hide"><h1>Mehr</h1><div class="card admin"><div class="tl"><div><b>Instagram</b><div class="muted">Holy Käpple</div></div><a id="mIG" class="btn sm" target="_blank">Öffnen</a></div><hr><div class="tl"><div><b>Homepage</b><div class="muted">Holy Käpple</div></div><a id="mWeb" class="btn sm" target="_blank">Öffnen</a></div></div><div class="card form"><b>Mitgliedsprofil</b><div class="muted" style="margin:5px 0 10px">Name für Ticketangebote.</div><div class="field"><input id="profile"></div><button class="btn" onclick="saveProfile()">Profil speichern</button></div><div class="card admin"><b>🔐 Adminbereich</b><div class="muted" style="margin:6px 0 12px">Nur für berechtigte Nutzer.</div><button class="btn sec" onclick="go('login')">Admin öffnen</button></div></section>
+<section id="login" class="hide"><h1>Adminbereich</h1><div class="muted">Anmeldung</div><div class="card form"><div class="field"><label>Admin-Code</label><input id="code" type="password"></div><button class="btn" onclick="login()">Anmelden</button><button class="btn sec" style="margin-top:8px" onclick="go('more')">Abbrechen</button></div></section>
+<section id="admin" class="hide"><h1>Admin</h1><div class="muted">News, Termine, Links und Ticketangebote verwalten</div><h2>News erstellen</h2><div class="card form"><div class="field"><label>Titel</label><input id="nt"></div><div class="field"><label>Text</label><textarea id="nx"></textarea></div><button class="btn" onclick="addNews()">Veröffentlichen</button></div><div id="an"></div><h2>Termin erstellen</h2><div class="card form"><div class="grid2"><div class="field"><label>Datum</label><input id="ed" type="date"></div><div class="field"><label>Uhrzeit</label><input id="et" type="time"></div></div><div class="field"><label>Titel</label><input id="ee"></div><div class="field"><label>Kategorie</label><select id="ec"><option>Stammtisch</option><option>Auswärtsfahrt</option><option>Sonstiges</option></select></div><div class="field"><label>Ort/Info</label><input id="ep"></div><button class="btn" onclick="addEvent()">Termin speichern</button></div><div id="ae"></div><h2>Links</h2><div class="card form"><div class="field"><label>Instagram</label><input id="li"></div><div class="field"><label>Homepage</label><input id="lw"></div><button class="btn" onclick="saveLinks()">Links speichern</button></div><h2>Ticketbörse</h2><div class="card admin" id="at"></div><button class="btn sec" onclick="resetData()">Demo-Daten zurücksetzen</button></section>
+</main><nav class="bottom"><button class="nav on" data-p="home"><span>⌂</span>Startseite</button><button class="nav" data-p="matches"><span>🏟</span>Heimspiele</button><button class="nav" data-p="events"><span>▣</span>Termine</button><button class="nav" data-p="tickets"><span>🎟</span>Ticketbörse</button><button class="nav" data-p="more"><span>•••</span>Mehr</button></nav><div id="toast" class="toast"></div></div>
+<script>
+const MS=[['2026-09-04','20:30','1. FC Köln','KOE','4:1'],['2026-09-19','18:30','Borussia Dortmund','BVB',''],['2026-10-23','—','Borussia Mönchengladbach','BMG',''],['2026-11-06','—','SV Werder Bremen','SVW',''],['2026-11-27','—','Eintracht Frankfurt','SGE',''],['2026-12-11','—','Union Berlin','FCU',''],['2027-01-08','—','FC Augsburg','FCA',''],['2027-01-17','—','1. FSV Mainz 05','M05',''],['2027-01-24','—','FC Bayern München','FCB',''],['2027-02-19','—','SC Paderborn 07','SCP',''],['2027-02-26','—','Hamburger SV','HSV',''],['2027-03-19','—','FC Schalke 04','S04',''],['2027-05-14','—','RB Leipzig','RBL','']];
+const DEF={name:'',ig:'https://www.instagram.com/vfb/',web:'https://www.vfb.de/',news:[{id:1,t:'Willkommen bei Holy Käpple',x:'Neuigkeiten, Termine und Ticketbörse unseres Fanclubs.',i:'🍺'},{id:2,t:'Gemeinsam ins nächste Heimspiel!',x:'Alle Infos zum kommenden Spiel findest du unter Heimspiele.',i:'⚽'}],events:[{id:1,d:'2026-09-17',time:'19:00',t:'Holy Käpple Stammtisch',c:'Stammtisch',p:'Schlupfloch, Schwäbisch Gmünd'}],tickets:[{id:1,n:'Max',d:'2026-09-19',b:'35A',q:1,pr:40,s:'Reihe 12 / Sitz 18',x:'Übergabe nach Absprache',st:'available',by:null}]};let D=JSON.parse(localStorage.getItem('hk2')||'null')||structuredClone(DEF);function save(){localStorage.setItem('hk2',JSON.stringify(D))}function e(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}function dp(d){let x=new Date(d+'T12:00:00');return{x,day:String(x.getDate()).padStart(2,'0'),mon:x.toLocaleDateString('de-DE',{month:'short'}).replace('.','').toUpperCase(),full:x.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'})}}function go(id){document.querySelectorAll('main section').forEach(x=>x.classList.add('hide'));document.getElementById(id).classList.remove('hide');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('on',x.dataset.p===id));window.scrollTo(0,0);render()}function msg(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}function render(){document.getElementById('ig').href=D.ig;document.getElementById('web').href=D.web;document.getElementById('mIG').href=D.ig;document.getElementById('mWeb').href=D.web;document.getElementById('profile').value=D.name||'';document.getElementById('li').value=D.ig;document.getElementById('lw').value=D.web;document.getElementById('news').innerHTML=D.news.slice(0,3).map(n=>`<article class="card news"><div class="thumb">${e(n.i)}</div><div><span class="tag">FANCLUB</span><br><b>${e(n.t)}</b><div class="muted">${e(n.x)}</div></div></article>`).join('')||'<div class="empty">Keine News.</div>';let now=new Date();let up=MS.filter(m=>new Date(m[0]+'T23:59:59')>=now),past=MS.filter(m=>new Date(m[0]+'T23:59:59')<now).reverse();let mr=m=>{let p=dp(m[0]);return `<div class="row"><div class="date">${p.mon}<strong>${p.day}</strong></div><div class="logo">${e(m[3])}</div><div class="grow"><b>VfB Stuttgart – ${e(m[2])}</b><div class="muted">${e(m[1])} Uhr</div></div>${m[4]?`<div class="result">${m[4]}</div>`:'<div>›</div>'}</div>`};document.getElementById('up').innerHTML=up.map(mr).join('');document.getElementById('past').innerHTML=past.map(mr).join('')||'<div class="empty">Keine vergangenen Spiele.</div>';let ev=D.events.slice().sort((a,b)=>a.d.localeCompare(b.d));document.getElementById('events').innerHTML=ev.map(v=>{let p=dp(v.d);return `<div class="card row"><div class="event-date">${p.mon}<strong>${p.day}</strong></div><div class="grow"><b>${e(v.t)}</b><div class="muted">${e(v.time||'')} · ${e(v.p||'')}</div><span class="badge x">${e(v.c)}</span></div></div>`}).join('')||'<div class="empty">Keine Termine.</div>';renderTickets();renderCheck();renderAdmin()}let TF='available';function tf(v,b){TF=v;document.querySelectorAll('#tickets+.x').forEach(()=>{});document.querySelectorAll('#tickets').length;document.querySelectorAll('.tabs .pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');renderTickets()}function renderTickets(){let name=(D.name||'').toLowerCase(),arr=D.tickets.filter(t=>TF==='mine'?name&&t.n.toLowerCase()===name:t.st==='available');document.getElementById('tickets').innerHTML=arr.map(t=>{let p=dp(t.d);return `<div class="card" onclick="detail(${t.id})"><div class="admin"><div class="tl"><b>VfB – ${e(MS.find(m=>m[0]===t.d)?.[2]||t.d)}</b><span class="price">${e(t.pr)} €</span></div><div class="muted">${p.full} · Block ${e(t.b)} · ${e(t.q)} Ticket${t.q>1?'s':''}</div><div class="tl"><span class="muted">${e(t.n)}${t.s?' · '+e(t.s):''}</span><span class="badge g">VERFÜGBAR</span></div></div></div>`}).join('')||'<div class="empty">Keine passenden Angebote.</div>'}function renderCheck(){let x=MS.filter(m=>new Date(m[0]+'T23:59:59')>=new Date()).slice(0,3);document.getElementById('check').innerHTML=x.map(m=>{let c=D.tickets.filter(t=>t.d===m[0]&&t.st==='available').length,p=dp(m[0]);return `<div class="card row"><div class="date">${p.mon}<strong>${p.day}</strong></div><div class="grow"><b>VfB – ${e(m[2])}</b><div class="muted">${e(m[1])} Uhr · ${c?c+' Ticketangebot'+(c>1?'e':''):'keine Angebote'}</div></div><span class="badge ${c?'g':'x'}">${c?'TICKETS':'–'}</span></div>`}).join('')}function ef(f,b){document.querySelectorAll('#events~*').length;let all=D.events.filter(v=>f==='Alle'||v.c===f);document.getElementById('events').innerHTML=all.map(v=>{let p=dp(v.d);return `<div class="card row"><div class="event-date">${p.mon}<strong>${p.day}</strong></div><div class="grow"><b>${e(v.t)}</b><div class="muted">${e(v.time||'')} · ${e(v.p||'')}</div><span class="badge x">${e(v.c)}</span></div></div>`}).join('')||'<div class="empty">Keine Termine.</div>';document.querySelectorAll('#events').forEach(()=>{});b.parentNode.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));b.classList.add('on')}function ticketForm(){let s=document.getElementById('m');s.innerHTML=MS.filter(m=>new Date(m[0]+'T23:59:59')>=new Date()).map(m=>`<option value="${m[0]}">${dp(m[0]).full} · VfB – ${e(m[2])}</option>`).join('');document.getElementById('n').value=D.name||'';go('form')}function addTicket(){let n=document.getElementById('n').value.trim(),d=document.getElementById('m').value,b=document.getElementById('b').value.trim(),q=+document.getElementById('q').value,pr=+document.getElementById('p').value,s=document.getElementById('s').value.trim(),x=document.getElementById('note').value.trim();if(!n||!d||!b||!q||pr<0){msg('Bitte alle Pflichtfelder ausfüllen.');return}D.name=n;D.tickets.unshift({id:Date.now(),n,d,b,q,pr,s,x,st:'available',by:null});save();msg('Ticketangebot eingestellt.');go('tickets')}function detail(id){let t=D.tickets.find(v=>v.id===id);if(!t)return;let mine=(D.name||'').toLowerCase()===t.n.toLowerCase(),m=MS.find(v=>v[0]===t.d),p=dp(t.d);document.getElementById('detailBox').innerHTML=`<div class="hero"><div class="big">VfB – ${e(m?.[2]||t.d)}</div><div>${p.full}</div></div><div class="card admin"><div class="tl"><b>Preis</b><span class="price">${e(t.pr)} € / Ticket</span></div><hr><div class="muted"><b>Block:</b> ${e(t.b)}</div><div class="muted"><b>Anzahl:</b> ${e(t.q)}</div>${t.s?`<div class="muted"><b>Reihe/Sitz:</b> ${e(t.s)}</div>`:''}${t.x?`<div class="muted" style="margin-top:8px"><b>Hinweis:</b> ${e(t.x)}</div>`:''}<div class="muted" style="margin-top:8px"><b>Anbieter:</b> ${e(t.n)}</div></div>${mine?`<button class="btn" onclick="done(${id})">✓ Transfer abgeschlossen</button><button class="btn sec" style="margin-top:8px" onclick="del(${id})">Angebot zurücknehmen</button>`:t.st==='available'?`<button class="btn" onclick="request(${id})">🎟 Ticket anfragen</button>`:'<div class="notice">Dieses Angebot ist bereits reserviert.</div>'}<button class="btn sec" style="margin-top:8px" onclick="go('tickets')">Zurück</button>`;go('detail')}function request(id){let t=D.tickets.find(v=>v.id===id);let n=prompt('Bitte deinen Namen eingeben:')?.trim();if(!n)return;t.st='reserved';t.by=n;D.name=n;save();msg('Ticket ist vorübergehend reserviert.');detail(id)}function done(id){let t=D.tickets.find(v=>v.id===id);D.tickets=D.tickets.filter(v=>v.id!==id);save();msg('Transfer abgeschlossen – Angebot entfernt.');go('tickets')}function del(id){D.tickets=D.tickets.filter(v=>v.id!==id);save();msg('Angebot entfernt.');go('tickets')}function saveProfile(){D.name=document.getElementById('profile').value.trim();save();msg('Profil gespeichert.')}function login(){if(document.getElementById('code').value==='1893')go('admin');else msg('Falscher Admin-Code.')}function addNews(){let t=document.getElementById('nt').value.trim(),x=document.getElementById('nx').value.trim();if(!t||!x){msg('Titel und Text fehlen.');return}D.news.unshift({id:Date.now(),t,x,i:'⚽'});save();document.getElementById('nt').value='';document.getElementById('nx').value='';msg('News veröffentlicht.');render()}function addEvent(){let d=document.getElementById('ed').value,t=document.getElementById('ee').value.trim(),time=document.getElementById('et').value,c=document.getElementById('ec').value,p=document.getElementById('ep').value.trim();if(!d||!t){msg('Datum und Titel fehlen.');return}D.events.push({id:Date.now(),d,t,time,c,p});save();msg('Termin gespeichert.');render()}function saveLinks(){D.ig=document.getElementById('li').value.trim();D.web=document.getElementById('lw').value.trim();save();msg('Links gespeichert.');render()}function renderAdmin(){document.getElementById('an').innerHTML=D.news.map(n=>`<div class="card admin"><b>${e(n.t)}</b><div class="muted">${e(n.x)}</div></div>`).join('');document.getElementById('ae').innerHTML=D.events.map(v=>`<div class="card admin"><b>${e(v.t)}</b><div class="muted">${dp(v.d).full} · ${e(v.time)} · ${e(v.p)}</div></div>`).join('');document.getElementById('at').innerHTML=D.tickets.map(t=>`<div style="padding:9px 0;border-bottom:1px solid #eee"><b>${e(MS.find(m=>m[0]===t.d)?.[2]||t.d)}</b><div class="muted">${e(t.n)} · ${e(t.q)} × ${e(t.pr)} € · ${e(t.st)}</div>${t.st!=='available'?`<button class="btn sm sec" style="margin-top:6px" onclick="done(${t.id})">Als abgeschlossen entfernen</button>`:''}</div>`).join('')||'<div class="empty">Keine Angebote.</div>'}function resetData(){if(confirm('Lokale Demo-Daten zurücksetzen?')){D=structuredClone(DEF);save();render();msg('Zurückgesetzt.')}}
+const VFB_NEWS_JSON='vfb-news.json';
+function renderVfbFeed(items){
+ const box=document.getElementById('vfbFeed'); if(!box)return;
+ if(!items||!items.length){box.innerHTML='<div class="vfb-loading">Aktuell sind keine VfB-News verfügbar.</div>';return}
+ box.innerHTML=items.slice(0,5).map(x=>{
+   const d=x.date?dp(x.date):null;
+   return `<a class="vfb-item" href="${e(x.url||'https://www.vfb.de/de/1893/aktuell/neues/')}" target="_blank" rel="noopener">
+     <div class="vfb-date">${d?d.mon:'VfB'}<strong>${d?d.day:'•'}</strong></div>
+     <div class="grow"><div class="vfb-source">VfB Stuttgart</div><div class="vfb-title">${e(x.title)}</div><div class="muted" style="margin-top:4px">${e(x.summary||'Offizielle Meldung auf VfB.de')}</div></div>
+   </a>`
+ }).join('')+`<a class="vfb-more" href="https://www.vfb.de/de/1893/aktuell/neues/" target="_blank">Alle VfB-News →</a>`;
+}
+async function loadVfbFeed(){
+ try{
+   const r=await fetch(VFB_NEWS_JSON+'?t='+Date.now(),{cache:'no-store'});
+   if(!r.ok)throw new Error('feed');
+   const data=await r.json(); renderVfbFeed(data);
+ }catch(err){
+   renderVfbFeed([]);
+ }
+}
+document.getElementById('vfbIgCard').href='https://www.instagram.com/vfbstuttgart/';
+document.getElementById('vfbWebCard').href='https://www.vfb.de/de/1893/aktuell/neues/';
+loadVfbFeed();
+document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>go(n.dataset.p));render();
+
+</script>
+<script id="holy-v4-ticket">
+(function(){
+  const KEY='hk2';
+  function state(){
+    try{return JSON.parse(localStorage.getItem(KEY))||{}}
+    catch(e){return {}}
+  }
+  function save(s){localStorage.setItem(KEY,JSON.stringify(s))}
+  function tickets(){let s=state();return Array.isArray(s.tickets)?s.tickets:[]}
+  function uid(){return 't_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,7)}
+
+  window.HKTicket = {
+    create:function(data){
+      const s=state(); s.tickets=tickets();
+      s.tickets.unshift({
+        id:uid(), game:data.game||'', block:data.block||'', row:data.row||'',
+        seat:data.seat||'', quantity:Number(data.quantity)||1, price:data.price||'',
+        seller:data.seller||'Mitglied', notes:data.notes||'', status:'available',
+        createdAt:new Date().toISOString()
+      }); save(s); return true;
+    },
+    reserve:function(id,name){
+      const s=state(); s.tickets=tickets();
+      const t=s.tickets.find(x=>x.id===id);
+      if(!t||t.status!=='available') return false;
+      t.status='reserved';t.reservedBy=name||'Mitglied';t.reservedAt=new Date().toISOString();
+      save(s);return true;
+    },
+    complete:function(id){
+      const s=state();s.tickets=tickets();
+      const t=s.tickets.find(x=>x.id===id);if(!t)return false;
+      t.status='completed';t.completedAt=new Date().toISOString();save(s);return true;
+    },
+    release:function(id){
+      const s=state();s.tickets=tickets();
+      const t=s.tickets.find(x=>x.id===id);if(!t)return false;
+      t.status='available';delete t.reservedBy;delete t.reservedAt;save(s);return true;
+    },
+    active:function(){return tickets().filter(t=>t.status!=='completed')}
+  };
+
+  // Make any existing ticket section more functional without requiring a backend yet.
+  function enhance(){
+    const candidates=[...document.querySelectorAll('section,div')];
+    const host=candidates.find(x=>/Ticketbörse/i.test(x.textContent||'') && x.children.length>0);
+    if(!host || host.dataset.hkEnhanced) return;
+    host.dataset.hkEnhanced='1';
+    const wrap=document.createElement('div');
+    wrap.className='ticket-create';
+    wrap.style.cssText='margin:18px 0;padding:18px';
+    wrap.innerHTML=`
+      <div class="section-kicker">TICKETBÖRSE</div>
+      <h3>🎟️ Ticket anbieten</h3>
+      <div style="color:#9aa3ad;font-size:13px;margin-bottom:14px">Ticket einstellen, Reservierung verwalten – die eigentliche Übergabe bleibt in WhatsApp.</div>
+      <form id="hkTicketForm">
+        <div class="form-grid">
+          <div class="full"><label>Spiel</label><input name="game" required placeholder="z. B. VfB – Dortmund"></div>
+          <div><label>Block</label><input name="block" required placeholder="z. B. 33A"></div>
+          <div><label>Anzahl</label><input name="quantity" type="number" min="1" value="1" required></div>
+          <div><label>Preis pro Ticket</label><input name="price" required placeholder="z. B. 35 €"></div>
+          <div><label>Reihe</label><input name="row" placeholder="optional"></div>
+          <div><label>Sitz</label><input name="seat" placeholder="optional"></div>
+          <div class="full"><label>Name</label><input name="seller" required placeholder="Dein Name"></div>
+          <div class="full"><label>Hinweise</label><textarea name="notes" rows="2" placeholder="z. B. Übergabe vor dem Stadion"></textarea></div>
+        </div>
+        <button class="primary add-ticket" type="submit" style="margin-top:13px;width:100%">Ticket einstellen</button>
+      </form>`;
+    host.prepend(wrap);
+    wrap.querySelector('form').addEventListener('submit',function(e){
+      e.preventDefault();
+      const f=new FormData(e.currentTarget);
+      HKTicket.create(Object.fromEntries(f.entries()));
+      e.currentTarget.reset();
+      alert('Ticket wurde eingestellt 🎟️');
+      renderTicketList(host);
+    });
+    renderTicketList(host);
+  }
+
+  function renderTicketList(host){
+    let box=host.querySelector('.hk-ticket-list');
+    if(!box){box=document.createElement('div');box.className='hk-ticket-list';host.appendChild(box)}
+    const arr=HKTicket.active();
+    if(!arr.length){box.innerHTML='<div class="empty">Noch keine aktiven Ticketangebote.</div>';return}
+    box.innerHTML='<div class="section-kicker" style="margin:18px 0 9px">AKTUELLE ANGEBOTE</div>'+
+      arr.map(t=>`
+      <div class="ticket-card" style="padding:16px;margin:10px 0">
+        <div style="display:flex;justify-content:space-between;gap:10px">
+          <div><div style="font-weight:900;font-size:18px">${esc(t.game)}</div>
+          <div style="color:#9aa3ad;margin-top:5px">${esc(t.quantity)}× · Block ${esc(t.block)}${t.row?' · Reihe '+esc(t.row):''}${t.seat?' · Sitz '+esc(t.seat):''}</div></div>
+          <div class="ticket-price">${esc(t.price)}</div>
+        </div>
+        <div style="margin-top:10px;color:#c4cbd2;font-size:13px">Anbieter: ${esc(t.seller)}${t.notes?' · '+esc(t.notes):''}</div>
+        ${t.status==='reserved'
+          ? `<div class="badge" style="margin-top:12px;display:inline-block">Reserviert für ${esc(t.reservedBy)}</div>
+             <button class="secondary" data-complete="${t.id}" style="margin-top:10px">Abgeschlossen</button>
+             <button class="secondary" data-release="${t.id}" style="margin-top:10px">Reservierung lösen</button>`
+          : `<button class="primary" data-reserve="${t.id}" style="margin-top:12px">Ticket anfragen</button>`}
+      </div>`).join('');
+    box.querySelectorAll('[data-reserve]').forEach(b=>b.onclick=()=>{
+      const n=prompt('Dein Name für die Reservierung:'); if(n&&HKTicket.reserve(b.dataset.reserve,n)) renderTicketList(host);
+    });
+    box.querySelectorAll('[data-complete]').forEach(b=>b.onclick=()=>{HKTicket.complete(b.dataset.complete);renderTicketList(host)});
+    box.querySelectorAll('[data-release]').forEach(b=>b.onclick=()=>{HKTicket.release(b.dataset.release);renderTicketList(host)});
+  }
+  function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+  const obs=new MutationObserver(()=>enhance());
+  document.addEventListener('DOMContentLoaded',()=>{enhance();obs.observe(document.body,{childList:true,subtree:true})});
+})();
+</script>
+
+</body></html>
