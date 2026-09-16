@@ -1,0 +1,22 @@
+[
+  {
+    "id": "welcome",
+    "category": "HOLY KÄPPLE",
+    "date": "16.09.2026",
+    "title": "Willkommen bei Holy Käpple!",
+    "teaser": "Schön, dass du hier bist. Gemeinsam für den VfB – auf und neben dem Platz.",
+    "body": "Willkommen in der neuen Holy-Käpple-App! Hier findest du Fanclub-News, gemeinsame Termine, Heimspiele und unsere Ticketbörse an einem Ort.",
+    "image": "",
+    "url": ""
+  },
+  {
+    "id": "stammtisch",
+    "category": "FANCLUB",
+    "date": "14.09.2026",
+    "title": "Stammtisch im Schlupfloch – sei dabei!",
+    "teaser": "Unser nächster Stammtisch steht an. Komm vorbei und bring gute Laune mit.",
+    "body": "Der nächste Holy-Käpple-Stammtisch findet im Schlupfloch statt. Alle Infos und kurzfristige Änderungen werden hier veröffentlicht.",
+    "image": "",
+    "url": ""
+  }
+]
