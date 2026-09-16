@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#c91522">
+<title>Holy Käpple – VfB Stuttgart Fanclub</title>
+<style>
+:root{--red:#d31322;--dark:#151515;--muted:#777;--bg:#f4f4f4;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:#171717;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#171717}
+.phone{max-width:430px;min-height:100vh;margin:auto;background:var(--bg);position:relative;overflow:hidden}
+.header{height:118px;padding:42px 18px 14px;color:#fff;background:linear-gradient(135deg,#111 0%,#292929 52%,#a40f19 100%);position:relative;overflow:hidden}
+.header:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.05),transparent 60%);pointer-events:none}
+.brand{font-weight:900;font-size:29px;line-height:.9;font-style:italic;letter-spacing:-1.8px;text-transform:uppercase;text-shadow:2px 2px 0 #000}
+.sub{font-size:10px;letter-spacing:2px;margin-top:7px;opacity:.85}
+.profile{position:absolute;right:17px;top:46px;border:1px solid rgba(255,255,255,.45);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:17px}
+.content{padding:18px 16px 94px;background:linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.98)),url("stadium-bg.jpg");min-height:calc(100vh - 118px)}
+h1{font-size:28px;margin:0 0 6px;font-weight:850}h2{font-size:19px;margin:22px 0 10px}
+.muted{color:var(--muted);font-size:13px}
+.card{background:var(--card);border-radius:16px;margin:10px 0;box-shadow:0 3px 14px rgba(0,0,0,.08);overflow:hidden}
+.news{display:flex;gap:12px;padding:12px}.thumb{width:76px;height:72px;border-radius:11px;background:linear-gradient(135deg,#222,#b3121d);display:grid;place-items:center;color:#fff;font-size:25px;flex:none}
+.news b{font-size:14px;line-height:1.25}.tag{display:inline-block;background:var(--red);color:#fff;border-radius:20px;padding:4px 8px;font-size:9px;font-weight:800;margin-bottom:7px}
+.row{display:flex;align-items:center;gap:12px;padding:14px;border-bottom:1px solid #eee}.row:last-child{border-bottom:0}.date{width:55px;text-align:center;font-weight:800;font-size:12px}.date strong{display:block;font-size:20px}.logo{width:38px;height:38px;border-radius:50%;background:#eee;display:grid;place-items:center;font-weight:900;font-size:10px}.grow{flex:1}.arrow{font-size:20px;color:#aaa}
+.event-date{width:55px;background:#f2f2f2;border-radius:10px;padding:7px;text-align:center;font-weight:800}.event-date strong{display:block;font-size:20px}
+.ticket{padding:14px}.price{font-size:18px;font-weight:900}.ticketline{display:flex;justify-content:space-between;gap:8px}.btn{border:0;border-radius:12px;padding:12px 15px;background:var(--red);color:#fff;font-weight:800;width:100%;font-size:14px}.btn.secondary{background:#eee;color:#222}.tabs{display:flex;gap:6px;margin:8px 0 14px}.pill{border:0;border-radius:20px;padding:8px 12px;background:#eee;font-weight:700;font-size:11px}.pill.active{background:var(--red);color:#fff}
+.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);max-width:430px;width:100%;height:78px;background:rgba(255,255,255,.97);border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:5}.nav{border:0;background:none;color:#777;font-size:10px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:5px}.nav span{font-size:20px}.nav.active{color:var(--red)}
+.more-item{padding:15px;display:flex;align-items:center;gap:12px}.icon{width:35px;text-align:center;font-size:20px}.lock{background:#f0f0f0;border-radius:12px;padding:15px;margin-top:15px}.admin{border:1px solid #ddd}
+.hide{display:none}.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#171717;color:#fff;padding:10px 15px;border-radius:20px;font-size:12px;opacity:0;transition:.2s;z-index:10}.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="phone">
+<header class="header">
+  <div class="brand">Holy Käpple</div><div class="sub">VfB Stuttgart Fanclub</div><div class="profile">♙</div>
+</header>
+
+<main class="content">
+<section id="home" class="page">
+  <h1>Willkommen bei Holy Käpple</h1><div class="muted">Schön, dass du hier bist. Gemeinsam für den VfB.</div>
+  <h2>Aktuelles</h2>
+  <article class="card news"><div class="thumb">⚽</div><div><span class="tag">AKTUELL</span><br><b>Gemeinsam ins nächste Heimspiel!</b><div class="muted">Alle Infos zum kommenden Spiel findest du unter Heimspiele.</div></div></article>
+  <article class="card news"><div class="thumb">🍺</div><div><span class="tag">FANCLUB</span><br><b>Nächster Stammtisch</b><div class="muted">Donnerstag, 17.09. · 19:00 Uhr</div></div></article>
+  <h2>Nächster Termin</h2>
+  <div class="card row"><div class="event-date">SEP<strong>17</strong></div><div class="grow"><b>Holy Käpple Stammtisch</b><div class="muted">19:00 Uhr · Schlupfloch</div></div><div class="arrow">›</div></div>
+</section>
+
+<section id="matches" class="page hide">
+  <h1>Alle Heimspiele</h1><div class="muted">Saison 2026/27</div>
+  <div class="card" id="matchList"></div>
+</section>
+
+<section id="events" class="page hide">
+  <h1>Termine & Events</h1>
+  <div class="tabs"><button class="pill active">Alle</button><button class="pill">Stammtisch</button><button class="pill">Auswärts</button></div>
+  <div id="eventList"></div>
+</section>
+
+<section id="tickets" class="page hide">
+  <h1>Ticketbörse</h1><div class="muted">Tickets von Mitgliedern</div>
+  <div class="tabs"><button class="pill active">Angebote</button><button class="pill">Meine Angebote</button></div>
+  <div id="ticketList"></div>
+  <button class="btn" onclick="toast('Ticket einstellen – Formular kommt im nächsten Schritt')">＋ Ticket anbieten</button>
+</section>
+
+<section id="more" class="page hide">
+  <h1>Mehr</h1>
+  <div class="card">
+    <div class="more-item"><div class="icon">⚙️</div><div class="grow"><b>Über uns</b><div class="muted">Holy Käpple – unsere Geschichte</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">👥</div><div class="grow"><b>Mitgliederbereich</b><div class="muted">Nur für Mitglieder</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">📷</div><div class="grow"><b>Galerie</b><div class="muted">Fotos & Erinnerungen</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">✉️</div><div class="grow"><b>Kontakt</b><div class="muted">Schreib uns eine Nachricht</div></div><div>›</div></div>
+  </div>
+  <div class="lock"><b>🔐 Adminbereich</b><div class="muted" style="margin:6px 0 12px">Nur für berechtigte Nutzer</div><button class="btn secondary" onclick="showAdmin()">Adminbereich öffnen</button></div>
+</section>
+
+<section id="admin" class="page hide">
+  <h1>Adminbereich</h1><div class="muted">Verwaltung für freigeschaltete Mitglieder</div>
+  <div class="card admin">
+    <div class="more-item"><div class="icon">📰</div><div class="grow"><b>News verwalten</b><div class="muted">Beiträge erstellen und bearbeiten</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">📅</div><div class="grow"><b>Termine & Events</b><div class="muted">Veranstaltungen anlegen und bearbeiten</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">🏟️</div><div class="grow"><b>Heimspiele</b><div class="muted">Spieldaten verwalten</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">🎟️</div><div class="grow"><b>Ticketbörse</b><div class="muted">Angebote moderieren</div></div><div>›</div></div>
+    <div class="more-item"><div class="icon">👤</div><div class="grow"><b>Benutzerverwaltung</b><div class="muted">Mitglieder und Rechte verwalten</div></div><div>›</div></div>
+  </div>
+</section>
+</main>
+
+<nav class="bottom">
+ <button class="nav active" data-page="home"><span>⌂</span>Startseite</button>
+ <button class="nav" data-page="matches"><span>🏟</span>Heimspiele</button>
+ <button class="nav" data-page="events"><span>▣</span>Termine</button>
+ <button class="nav" data-page="tickets"><span>🎟</span>Ticketbörse</button>
+ <button class="nav" data-page="more"><span>•••</span>Mehr</button>
+</nav>
+<div id="toast" class="toast"></div>
+</div>
+
+<script>
+const matches=[
+ ['19.09.','15:30','Mainz 05','M05'],['03.10.','15:30','Borussia Dortmund','BVB'],['24.10.','15:30','Werder Bremen','SVW'],
+ ['07.11.','15:30','Eintracht Frankfurt','SGE'],['28.11.','15:30','RB Leipzig','RBL'],['12.12.','15:30','Bayer Leverkusen','B04'],
+ ['23.01.','15:30','SC Freiburg','SCF'],['06.02.','15:30','FC Bayern München','FCB'],['20.02.','15:30','Bor. Mönchengladbach','BMG']
+];
+const events=[
+ ['17','SEP','Stammtisch','19:00 Uhr · Schlupfloch, Schwäbisch Gmünd'],['19','SEP','VfB – Mainz 05','15:30 Uhr · MHP Arena Stuttgart'],
+ ['03','OKT','VfB – Borussia Dortmund','15:30 Uhr · MHP Arena Stuttgart'],['16','OKT','Auswärtsfahrt nach Leipzig','Abfahrt 08:00 Uhr · Anmeldung erforderlich'],
+ ['24','OKT','VfB – Werder Bremen','15:30 Uhr · MHP Arena Stuttgart']
+];
+const tickets=[['VfB – Dortmund','Block 35A · Reihe 12 · Sitz 18','25 €','03.10.2026'],['VfB – Werder Bremen','Block 11B · Reihe 4 · Sitz 7','50 €','24.10.2026'],['VfB – Frankfurt','Block 40 · Reihe 9 · Sitz 3–4','je 40 €','07.11.2026'],['VfB – RB Leipzig','Block 36 · Reihe 14 · Sitz 21','30 €','28.11.2026']];
+document.getElementById('matchList').innerHTML=matches.map(m=>`<div class="row"><div class="date">${m[0]}<strong>${m[1]}</strong></div><div class="logo">${m[3]}</div><div class="grow"><b>VfB Stuttgart – ${m[2]}</b><div class="muted">${m[1]}</div></div><div class="arrow">›</div></div>`).join('');
+document.getElementById('eventList').innerHTML=events.map(e=>`<div class="card row"><div class="event-date">${e[1]}<strong>${e[0]}</strong></div><div class="grow"><b>${e[2]}</b><div class="muted">${e[3]}</div></div><div class="arrow">›</div></div>`).join('');
+document.getElementById('ticketList').innerHTML=tickets.map(t=>`<div class="card ticket"><div class="ticketline"><b>${t[0]}</b><span class="price">${t[2]}</span></div><div class="muted">${t[1]} · ${t[3]}</div></div>`).join('');
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.add('hide'));document.getElementById(page).classList.remove('hide');document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page===page));window.scrollTo(0,0)}
+document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>go(n.dataset.page));
+function showAdmin(){go('admin');}
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}
+</script>
+</body>
+</html>
